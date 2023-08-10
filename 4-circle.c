@@ -28,23 +28,23 @@ plot_circle(int cx, int cy, int r)
 	int x, y;
 
 	for (x=0, y=r; x < y; x++)
-		for (; y>=0; y--) {
-			plot(cx+x, cy+y);
-			plot(cx+x, cy-y);
-			plot(cx-x, cy+y);
-			plot(cx-x, cy-y);
+	for (; y>=0; y--) {
+		plot(cx+x, cy+y);
+		plot(cx+x, cy-y);
+		plot(cx-x, cy+y);
+		plot(cx-x, cy-y);
 
-			plot(cx+y, cy+x);
-			plot(cx+y, cy-x);
-			plot(cx-y, cy+x);
-			plot(cx-y, cy-x);
+		plot(cx+y, cy+x);
+		plot(cx+y, cy-x);
+		plot(cx-y, cy+x);
+		plot(cx-y, cy-x);
 
-			//print();
-			//fgetc(stdin);
+		//print();
+		//fgetc(stdin);
 
-			if (x*x + (y-1)*(y-1) < r*r)
-				break;
-		}
+		if (x*x + (y-1)*(y-1) < r*r)
+			break;
+	}
 }
 
 int
